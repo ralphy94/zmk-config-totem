@@ -1,9 +1,19 @@
 include:
+  # --- DONGLE (central)
+  - board: seeeduino_xiao_ble
+    shield: totem_dongle prospector_adapter
+    # REMOVE the snippet and cmake-args lines for now
+
+  # --- SETTINGS RESET
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+
+  # --- LEFT (peripheral)
   - board: seeeduino_xiao_ble
     shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # --- RIGHT (peripheral)
   - board: seeeduino_xiao_ble
     shield: totem_right
-  - board: seeeduino_xiao_ble
-    shield: prospector_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
