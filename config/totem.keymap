@@ -39,21 +39,21 @@
     /* F + J → Caps Word */
     combo_caps_word {
         timeout-ms = <75>;
-        key-positions = <8 21>;   /* F (8) + J (21) */
+        key-positions = <13 16>;   /* F (13) + J (16) */
         bindings = <&caps_word>;
     };
 
     /* S + D → ` (backtick on the tilde key) */
     combo_backtick {
         timeout-ms = <75>;
-        key-positions = <6 7>;    /* S (6) + D (7) */
+        key-positions = <11 12>;    /* S (11) + D (12) */
         bindings = <&kp GRAVE>;
     };
 
     /* S + D + F → Enter */
     combo_enter_sdf {
         timeout-ms = <75>;
-        key-positions = <6 7 8>;  /* S + D + F */
+        key-positions = <11 12 13>;  /* S + D + F */
         bindings = <&kp RET>;
     };
 
@@ -67,7 +67,7 @@
     /* K + L → Backspace */
     combo_bspc_kl {
         timeout-ms = <75>;
-        key-positions = <22 23>;  /* K (22) + L (23) */
+        key-positions = <0 1>;  /* K (0) + L (1) */
         bindings = <&kp BSPC>;
     };
 };
